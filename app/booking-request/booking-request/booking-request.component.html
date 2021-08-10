@@ -1,0 +1,92 @@
+<div style="height: 700px;overflow: scroll;">
+    <h3>Booking Request Form</h3>
+    
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group"> 
+            <label for="sourceFrom">Source : </label>
+            <input type="text" class="form-control" id="sourceFrom" required [(ngModel)]="bookingRequest.sourceFrom"
+                name="sourceFrom">
+    
+        </div>
+    
+        <div class="form-group">
+            <label for="destinationTo">Destination To : </label>
+            <input type="text" class="form-control" id="destinationTo" required [(ngModel)]="bookingRequest.destinationTo"
+                name="destinationTo">
+    
+        </div>
+    
+        <div class="form-group">
+            <label for="startDate">Start Date : </label>
+            <input type="date" class="form-control" id="startDate" required [(ngModel)]="bookingRequest.startDate"
+                name="startDate">
+    
+        </div>
+    
+        <div class="form-group">
+            <label for="endDate">End Date : </label>
+            <input type="date" class="form-control" id="endDate" required [(ngModel)]="bookingRequest.endDate"
+                name="endDate">
+    
+        </div>
+    
+        <!-- <div class="form-group">
+                <label for="travelMedium">Travel Medium : </label>
+                <input type="text" class="form-control" id="travelMedium" 
+                required 
+                [(ngModel)] = "bookingRequest.travelMedium" name ="travelMedium">
+    
+            </div> -->
+    
+    
+        <div>
+            <label for="travelMedium"> TRAVEL MEDIUM : </label>
+            <select name="travelMedium" class="custom-select" [(ngModel)]="bookingRequest.travelMedium" #mySelect
+                (change)='onOptionsSelected(mySelect.value)' name="travelMedium" name="travelMedium">   
+                <option value="TRAIN">TRAIN</option>
+                <option value="FLIGHT">FLIGHT</option>
+    
+            </select>
+    
+        </div>
+    
+        <br>
+        <div *ngIf="showaadhar">
+            <div class="form-group">
+                <label for="aadharNo">Aadhar Number : </label>
+                <input type="text" class="form-control" id="aadharNo" required [(ngModel)]="bookingRequest.aadharNo"
+                    name="aadharNo">
+    
+            </div>
+    
+            <div class="form-group">
+                <label for="aadharPhoto">Aadhar Photo : </label>
+                <input type="file" class="form-control" id="aadharPhoto" required [(ngModel)]="bookingRequest.aadharPhoto"
+                    name="aadharPhoto">
+    
+            </div>
+        </div>
+        <div *ngIf="showpassport">
+            <div class="form-group">
+                <label for="passportNo">Passport Number : </label>
+                <input type="text" class="form-control" id="passportNo" required [(ngModel)]="bookingRequest.passportNo"
+                    name="passportNo">
+    
+            </div>
+    
+            <div class="form-group">
+                <label for="passportPhoto">Passport Photo : </label>
+                <input type="file" class="form-control" id="passportPhoto" required
+                    [(ngModel)]="bookingRequest.passportPhoto" name="passportPhoto">
+    
+            </div>
+        </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" style="margin-top: 5px;">Submit</button>
+    
+    </div>
+    </form>
+    
+    

@@ -1,0 +1,41 @@
+
+
+<div class="panel panel-primary">
+
+    <div class="panel-heading">
+        <h2>REQUEST LIST</h2>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>TRAVEL REQUEST ID </th>
+                    <th>SOURCE FROM</th>
+                    <th>DESTINATION TO</th>
+                    <th>DOCUMENTS STATUS</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let request of bookingRequestById">
+
+                    <td>{{ request.bookingRequestId }}</td>
+                    <td>{{ request.sourceFrom }}</td>
+                    <td>{{request.destinationTo}}</td>
+                    <td>{{request.status}}</td>
+
+                    <td>
+                        <button
+                        (click)="resubmitted(request.bookingRequestId)" class="btn btn-success" style="margin-left: 10px;">Resubmit Documents</button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+<h1 style="text-align: center;"> Employee Dashboard</h1>
+
+<div class="container">
+  <br>
+  <br>
+  <h2 style="text-align:center;">WELCOME {{employee.firstName}} {{employee.lastName}}</h2>
+
+  <br>
+
+  <button type="submit" (click)="sendTravelRequest()" class="btn btn-success">TRAVEL REQUEST</button>
+
+  <button type="submit" (click)="viewTravelRequestStatus()" class="btn btn-success" style="margin-left: 239px">TRAVEL
+    REQUEST STATUS</button>
+
+  <button type="submit" (click)="viewTravelDetails()" class="btn btn-success" style="margin-left: 239px">TRAVEL
+    DETAILS</button>
+
+  <div *ngIf="employee">
+    <button type="submit" (click)="documentResubmit()" class="btn btn-success"
+      style="margin-left: 419px;margin-top: 20px;">DOCUMENT RESUBMIT</button>
+  </div>
+
+
+
+</div>
+<div>
+  <button type="submit" (click)="logout()" class="btn btn-danger">Logout</button>
+</div>

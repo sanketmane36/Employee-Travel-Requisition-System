@@ -1,0 +1,24 @@
+<div *ngIf="bookingRequest1">
+    <div *ngIf="showaadhar">
+
+        <div class="form-group">
+            <label for="aadharPhoto">Aadhar Photo : </label>
+            <input type="file" class="form-control" id="aadharPhoto" required [(ngModel)]="bookingRequest1.aadharPhoto"
+                name="aadharPhoto">
+
+        </div>
+    </div>
+    <div *ngIf="showpassport">
+
+        <div class="form-group">
+            <label for="passportPhoto">Passport Photo : </label>
+            <input type="file" class="form-control" id="passportPhoto" required
+                [(ngModel)]="bookingRequest1.passportPhoto" name="passportPhoto">
+
+        </div>
+    </div>
+
+</div>
+<td>
+    <button (click)="submit()" class="btn btn-success" style="margin-left: 10px;">Submit</button>
+</td>

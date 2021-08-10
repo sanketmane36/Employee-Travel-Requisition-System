@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+
+    <div class="panel-heading">
+        <h2>REQUEST LIST</h2>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>TRAVEL REQUEST ID </th>
+                    <th>EMPLOYEE NAME</th>
+                    <th>SOURCE FROM</th>
+                    <th>DESTINATION TO</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let request of bookingRequest">
+
+                    <td>{{ request.bookingRequestId }}</td>
+                    <td>{{request.employee.firstName}} {{request.employee.lastName}}</td>
+                    <td>{{ request.sourceFrom }}</td>
+                    <td>{{request.destinationTo}}</td>
+                    <td>{{request.status}}</td>
+
+                    <td>
+                       
+
+                        <button (click)="requestDetails(request.bookingRequestId)"
+                        class="btn btn-info" style="margin-left: 10px;">Details</button>
+
+
+                    </td>
+
+                </tr>
+              
+            </tbody>
+           
+            
+        </table>
+      
+       
+    </div>
+    <button (click)="back()"
+    class="btn btn-info" style="margin-left: 10px;">Back</button>
+   
+</div>

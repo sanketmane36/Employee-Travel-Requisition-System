@@ -1,0 +1,17 @@
+<h1 style="text-align: center;"> Agent Dashboard</h1>
+<div class="container">
+  <br>
+  <br>
+  <h2 style="text-align:center;">WELCOME {{agent.agentName}}</h2>
+  <hr>
+  <button type="submit" (click)="showAllRequestsByManager()" class="btn btn-success" style="margin-left: 15px">TRAVEL REQUEST APPROVED BY
+    MANAGER</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="submit" (click)="showAllRequestsByDirector()" class="btn btn-success" style="margin-left: 190px">TRAVEL REQUEST APPROVED BY
+    DIRECTOR</button>
+  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="submit" (click)="viewBookedTickets()" class="btn btn-success" style="margin-left: 347px">VIEW BOOKED TICKETS</button>
+</div>
+<div>
+  <button type="submit" (click)="logout()" class="btn btn-danger">Logout</button>
+</div>

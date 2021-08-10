@@ -1,0 +1,72 @@
+<h2>REQUEST DETAILS</h2>
+<hr>
+<div *ngIf="bookingRequest">
+    <div>
+        <label>
+            <b>BOOKING REQUEST ID : </b>{{bookingRequest.bookingRequestId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>NAME : </b>{{bookingRequest.employee.firstName}}&nbsp;{{bookingRequest.employee.lastName}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>SOURCE FROM : </b>{{bookingRequest.sourceFrom}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>DESTINATION TO : </b>{{bookingRequest.destinationTo}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>START DATE : </b>{{bookingRequest.startDate}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>END DATE : </b>{{bookingRequest.endDate}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>TRAVEL MEDIUM : </b>{{bookingRequest.travelMedium}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>AADHAR NUMBER : </b>{{bookingRequest.aadharNo}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>PASSPORT NUMBER : </b>{{bookingRequest.passportNo}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>STATUS : </b>{{bookingRequest.status}}
+        </label>
+    </div>
+
+    
+
+    <br>
+    <br>
+    <button (click)="bookingDetailsList()" class="btn btn-primary">Back to Booking Request</button>
+
+    
+
+</div>

@@ -1,0 +1,91 @@
+<h2>REQUEST DETAILS</h2>
+<hr>
+<div *ngIf="bookingRequest">
+    <div>
+        <label>
+            <b>BOOKING REQUEST ID : </b>{{bookingRequest.bookingRequestId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>BOOKING EMPLOYEE ID : </b>{{bookingRequest.employee.employeeId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>SOURCE FROM : </b>{{bookingRequest.sourceFrom}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>DESTINATION TO : </b>{{bookingRequest.destinationTo}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>START DATE : </b>{{bookingRequest.startDate}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>END DATE : </b>{{bookingRequest.endDate}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>TRAVEL MEDIUM : </b>{{bookingRequest.travelMedium}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>AADHAR NUMBER : </b>{{bookingRequest.aadharNo}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>PASSPORT NUMBER : </b>{{bookingRequest.passportNo}}
+        </label>
+    </div>
+    <hr>
+
+    <div>
+        <label>
+            <h4><b>ALL SLAB OF EMPLOYEE : </b></h4>
+        </label>
+    </div>
+    <hr>
+    <div>
+        <label>
+            <b>EMPLOYEE DESIGNATION: </b>{{bookingRequest.employee.slab.designation}}
+        </label>
+
+    </div>
+    <div>
+        <label>
+            <b>EMPLOYEE TRAVEL MODE : </b>{{bookingRequest.employee.slab.travelMode}}
+        </label>
+    </div>
+
+    <p *ngIf="result" class="text-info">Employee Is Allowed To Travel By Selected Travel Medium &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="document(bookingRequest.bookingRequestId)" class="btn btn-primary">VIEW DOCUMENT</button>
+        <br>
+        <button (click)="bookTicket(bookingRequest.bookingRequestId)" class="btn btn-primary">BOOK TICKET</button>&nbsp;
+        
+    </p>
+    <p *ngIf="!result" class="text-danger">Employee travel mode has not matched
+        <button (click)="sendRequestToDirector()" class="btn btn-danger">SEND REQUEST TO
+            DIRECTOR</button>&nbsp;&nbsp;
+       
+    </p>
+    <div>
+        <button (click)="backbookingRequest()" class="btn btn-primary">GO BACK</button>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+
+
+
+
+<div class="panel panel-primary">
+
+    <div class="panel-heading">
+        <h2>BOOKING DETAILS</h2>
+    </div>
+    <br>
+   
+
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>BOOKING DETAILS ID</th>
+                    <th>BOOKING REQUEST ID</th>
+                    <th>TICKET DETAILS</th>
+                    <th>TICKET PHOTO</th>
+                    <th>HOTEL ADDRESS</th>
+                    <th>AGENT NAME</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let details of bookingDetails">
+
+                    <td>{{ details.bookingDetailsId }}</td>
+                    <td>{{ details.bookingRequest.bookingRequestId }}</td>
+                    <td>{{details.ticketDetails}}</td>
+                    <td>{{details.ticketPhoto }}</td>
+                    <td>{{details.hotelAddress }}</td>
+                    <td>{{details.agent.agentName}}</td>
+
+                    <!-- <td>
+
+
+                        <button (click)="requestDetails(request.bookingRequestId)" class="btn btn-info"
+                            style="margin-left: 10px;">Details</button>
+
+
+                    </td> -->
+
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

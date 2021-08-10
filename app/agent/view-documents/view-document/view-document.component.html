@@ -1,0 +1,19 @@
+<div *ngIf="bookingRequest">
+    <div *ngIf=result>
+        <p>Aadhar Number : {{bookingRequest.aadharNo}}</p>
+        <!-- <p>Aadhar Photo : {{bookingRequest.aadharPhoto}}</p> -->
+    </div>
+    <div *ngIf=!result>
+        <p>Aadhar Number : {{bookingRequest.aadharNo}}</p>
+        <!-- <p>Aadhar Photo : {{bookingRequest.aadharPhoto}}</p> -->
+        <p>Passport Number : {{bookingRequest.passportNo}} </p>
+        <!-- <p>Passport Photo : {{bookingRequest.passportPhoto}}</p> -->
+    </div>
+</div>
+<p>
+    <button (click)="resubmitDocuments()" class="btn btn-primary">RESUBMIT
+        DOCUMENTS</button>
+</p>
+<b>
+    <button (click)="goBack()" class="btn btn-primary">GO BACK</button>
+</b>

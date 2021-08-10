@@ -1,0 +1,15 @@
+<h3>Login</h3>
+<div style="width:400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="agentId">Agent Id</label>
+            <input type="text" class="form-control" id="agentId" required [(ngModel)]="agent.agentId" name="agentId" placeholder="Enter ID">
+        </div>
+        <div class="form-group">
+            <label for="agentPassword">Password</label>
+            <input type="password" class="form-control" id="agentPassword" required [(ngModel)]="agent.agentPassword"
+                name="agentPassword" placeholder="Enter Password">
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>

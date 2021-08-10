@@ -1,0 +1,21 @@
+<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Booking Request Id</th>
+                <th>sourceFrom</th>
+                <th>destinationTo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let request of bookingRequest ">
+                <td>{{request.bookingRequestId}}</td>
+                <td>{{request.sourceFrom}}</td>
+                <td>{{request.destinationTo}}</td>
+                <td>
+                    <button (click)="detail(request.bookingRequestId)" class="btn btn-primary">DETAILS</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

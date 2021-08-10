@@ -1,0 +1,29 @@
+
+<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Booking Details Id</th>
+                <th>Booking Request Id</th>
+                <th>Employee Name</th>
+                <th>Ticket details</th>
+                <th>Hotel Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let request of bookingDetails ">
+                <td>{{request.bookingDetailsId}}</td>
+                <td>{{request.bookingRequest.bookingRequestId}}</td>
+                <td>{{request.bookingRequest.employee.firstName}}&nbsp;&nbsp;{{request.bookingRequest.employee.lastName}}</td>
+                <td>{{request.ticketDetails}}</td>
+                <td>{{request.hotelAddress}}</td>
+
+            </tr>
+        </tbody>
+
+        <button (click)="backAgentDashBoard()" class="btn btn-primary">GO BACK</button>
+
+
+
+    </table>
+</div>

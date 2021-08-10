@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<title>Login Page</title>
+
+
+  <h3>Login</h3>
+    <div style="width:400px;">
+
+        <form (ngSubmit)="onSubmit()">
+           
+            <div class="form-group">
+                <label for="employeeId">Employee Id</label>
+                <input type="text" class="form-control" id="employeeId" placeholder="Enter ID"
+                    [(ngModel)]="employee.employeeId" name="employeeId" required>
+
+            </div>
+            <div class="form-group">
+                <label for="employeePassword">Password</label>
+                <input type="password" class="form-control" id="employeePassword" placeholder="Enter Password"
+                    [(ngModel)]="employee.employeePassword" name="employeePassword" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Login</button>
+
+        </form>
+    </div>
+
+
+
+</html>

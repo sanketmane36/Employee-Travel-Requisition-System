@@ -1,0 +1,82 @@
+<h2>REQUEST DETAILS</h2>
+<hr>
+<div *ngIf="bookingRequest">
+    <div>
+        <label>
+            <b>BOOKING REQUEST ID : </b>{{bookingRequest.bookingRequestId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>SOURCE FROM : </b>{{bookingRequest.sourceFrom}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>DESTINATION TO : </b>{{bookingRequest.destinationTo}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>START DATE : </b>{{bookingRequest.startDate}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>END DATE : </b>{{bookingRequest.endDate}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>TRAVEL MEDIUM : </b>{{bookingRequest.travelMedium}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>AADHAR NUMBER : </b>{{bookingRequest.aadharNo}}
+        </label>
+    </div>
+
+
+    <div>
+        <label>
+            <b>PASSPORT NUMBER : </b>{{bookingRequest.passportNo}}
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <b>EMPLOYEE DESIGNATION: </b>{{bookingRequest.employee.slab.designation}}
+        </label>
+
+    </div>
+    <div>
+        <label>
+            <b>EMPLOYEE TRAVEL MODE : </b>{{bookingRequest.employee.slab.travelMode}}
+        </label>
+    </div>
+
+    <label for="Director_Status"><b>APPROVE STATUS :</b></label>&nbsp;&nbsp;&nbsp;
+
+    <input type="radio" name="oon" [(ngModel)]="bookingRequest.status" value="APPROVED_BY_DIRECTOR">
+    <label for="Director_Status">Approve</label>&nbsp;
+    <input type="radio" name="oon" [(ngModel)]="bookingRequest.status" value="REJECTED_BY_DIRECTOR">
+    <label for="Director_Status">Reject</label><br>
+
+
+    <br>
+    <p *ngIf="result" class="text-info">Employee Is Allowed To Travel By Selected Travel Medium</p>
+    <p *ngIf="!result" class="text-danger">Employee travel mode has not matched</p>
+    <br>
+    <button (click)="bookingDetailsList()" class="btn btn-primary">Back to Booking Request</button>
+
+    <br> <br>
+    <button class="btn btn-primary" (click)=sendRequestToAgent()>Send To Agent</button>
+
+</div>
